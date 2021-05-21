@@ -2,15 +2,50 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Simple website</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Student Login</title>
   </head>
+      <style type="text/css">
+
+         div{
+           width: 500px;
+           height: 500px;
+           border: 5px solid grey;
+           margin: 0 auto;
+           padding: 140px;
+           box-sizing: border-box; 
+         }
+      </style>   
   <body>
-    <h1>Task List</h1>
-    <p id="msg">Current tasks:</p>
-    <ul>
-      <li class="list">Add visual styles</li>
-      <li class="list">Add light and dark themes</li>
-      <li>Enable switching the theme</li>
-    </ul>
+    <center><h1>Welcome to Student Login</h1></center>
+    <hr>
+
+    <div>
+      Username:<br>
+      <input type="text" name="text" id="username">
+      <br><br>
+
+      Password:<br>
+      <input type="password" name="text" id="password">
+      <br><br>
+
+      <button onclick="login()">LOGIN</button>
+
+    </div>
+    <script type="text/javascript">
+      function login(){
+        var uname=document.getElementById('Username').value;
+        var pass=document.getElementById('Password').value;
+
+        if(uname=='301145778' && pass=='Natisha')
+        {
+          location.assign("https://www.centennialcollege.ca/")
+        }
+        else
+        {
+          window.alert("Login Failed");
+        }
+
+      }
+    
+    </script>
   </body>
